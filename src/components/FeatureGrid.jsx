@@ -10,68 +10,51 @@ const FeatureGrid = ({ textColour, hoverColour, iconColour }) => {
 	}
 	return (
 		<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-			<div className="flex flex-col justify-center items-center">
-				<CiDumbbell
-					size={60}
-					role="presentation"
-					className={`text-${iconColour}`}
-				/>
-				<h3
-					className={`${textColourVariants[textColour]} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}
-				>
+			{/* Box with Red Border & Hover Animation */}
+			<div className="flex flex-col justify-center items-center border-2 border-red-500 p-6 rounded-lg 
+                transition transform hover:scale-105 hover:shadow-lg duration-300">
+				<CiDumbbell size={60} role="presentation" className={`text-${iconColour}`} />
+				<h3 className={`${textColourVariants[textColour]} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}>
 					Quality equipment
 				</h3>
 				<p className="w-[70%] leading-7">
-					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-					libero, sit amet adipisc.
+					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipisc.
 				</p>
 			</div>
-			<div className="flex flex-col justify-center items-center">
-				<LuApple
-					size={60}
-					role="presentation"
-					className={`text-${iconColour}`}
-				/>
-				<h3
-					className={`text-${textColour} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}
-				>
+
+			{/* Box with Red Border & Hover Animation */}
+			<div className="flex flex-col justify-center items-center border-2 border-red-500 p-6 rounded-lg 
+                transition transform hover:scale-105 hover:shadow-lg duration-300">
+				<LuApple size={60} role="presentation" className={`text-${iconColour}`} />
+				<h3 className={`${textColourVariants[textColour]} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}>
 					Customised nutrition plans
 				</h3>
 				<p className="w-[70%] leading-7">
-					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-					libero, sit amet adipisc.
+					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipisc.
 				</p>
 			</div>
-			<div className="flex flex-col justify-center items-center">
-				<BsWater
-					size={60}
-					role="presentation"
-					className={`text-${iconColour}`}
-				/>
-				<h3
-					className={`text-${textColour} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}
-				>
+
+			{/* Box with Red Border & Hover Animation */}
+			<div className="flex flex-col justify-center items-center border-2 border-red-500 p-6 rounded-lg 
+                transition transform hover:scale-105 hover:shadow-lg duration-300">
+				<BsWater size={60} role="presentation" className={`text-${iconColour}`} />
+				<h3 className={`${textColourVariants[textColour]} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}>
 					Shower service
 				</h3>
 				<p className="w-[70%] leading-7">
-					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-					libero, sit amet adipisc.
+					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipisc.
 				</p>
 			</div>
-			<div className="flex flex-col justify-center items-center">
-				<BsHeartPulse
-					size={60}
-					role="presentation"
-					className={`text-${iconColour}`}
-				/>
-				<h3
-					className={`text-${textColour} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}
-				>
+
+			{/* Box with Red Border & Hover Animation */}
+			<div className="flex flex-col justify-center items-center border-2 border-red-500 p-6 rounded-lg 
+                transition transform hover:scale-105 hover:shadow-lg duration-300">
+				<BsHeartPulse size={60} role="presentation" className={`text-${iconColour}`} />
+				<h3 className={`${textColourVariants[textColour]} uppercase text-xl py-4 tracking-wide hover:text-${hoverColour} duration-300 cursor-pointer`}>
 					Unique to your needs
 				</h3>
 				<p className="w-[70%] leading-7">
-					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-					libero, sit amet adipisc.
+					Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipisc.
 				</p>
 			</div>
 		</div>
@@ -79,3 +62,5 @@ const FeatureGrid = ({ textColour, hoverColour, iconColour }) => {
 }
 
 export default FeatureGrid
+
+

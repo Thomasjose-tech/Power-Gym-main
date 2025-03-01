@@ -10,7 +10,7 @@ const MotionHeadings = () => {
 				initial={{ y: -100, opacity: 0 }}
 				animate={{ y: 0, opacity: 100 }}
 				transition={{ duration: 0.2, delay: 0.5 }}
-				className="md:absolute top-44 md:left-[10%] text-6xl xs:text-7xl md:text-8xl lg:text-9xl tracking-[0.3em] text-accent uppercase"
+				className="md:absolute top-20 md:left-[3%] text-6xl xs:text-7xl md:text-8xl lg:text-9xl tracking-[0.3em] text-accent uppercase"
 			>
 				Power
 			</motion.h1>

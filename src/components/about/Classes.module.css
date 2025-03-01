@@ -1,0 +1,166 @@
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg {
+  background: linear-gradient(45deg, #000000, #0b0b0b, #141414);
+  background-size: 400% 400%;
+  animation: gradientBG 3s ease infinite;
+}
+
+/* Rotate Animation */
+@keyframes rotateOnce {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotateOnce {
+  animation: rotateOnce 0.5s linear 1;
+}
+
+/* Flip effect */
+.flip-image {
+  transition: transform 0.6s ease-in-out;
+}
+
+.flip-image:hover {
+  transform: rotateY(180deg);
+}
+
+/* Dark background for image */
+.darkBackground {
+  background-color: #FFD700;
+  padding: 2px;
+  transition: transform 0.5s ease-out;
+}
+
+/* Move dark background and text downward on hover */
+.darkBackground.open {
+  transform: translateY(20px);
+}
+
+/* White background for text */
+.whiteBackground {
+  background-color: #141E30;
+  padding: 20px;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out, max-height 1s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* Show text smoothly when hovering */
+.darkBackground.open + .whiteBackground {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 500px;
+}
+
+/* Text hover animation */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Zoom In/Out effect */
+.zoom-image {
+  transition: transform 0.4s ease-in-out;
+}
+
+.zoom-image:hover {
+  transform: scale(1.1);
+}
+
+/* Floating Particles Animation */
+@keyframes floatParticles {
+  0% { transform: translateY(0px) translateX(0px); opacity: 1; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+  100% { transform: translateY(0px) translateX(0px); opacity: 1; }
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: floatParticles 4s infinite ease-in-out alternate;
+}
+
+/* Different particle sizes and speeds */
+.particle:nth-child(1) { top: 20%; left: 10%; animation-duration: 6s; width: 8px; height: 8px; }
+.particle:nth-child(2) { top: 40%; left: 30%; animation-duration: 8s; width: 12px; height: 12px; }
+.particle:nth-child(3) { top: 60%; left: 50%; animation-duration: 5s; width: 15px; height: 15px; }
+.particle:nth-child(4) { top: 80%; left: 70%; animation-duration: 7s; width: 10px; height: 10px; }
+.particle:nth-child(5) { top: 10%; left: 90%; animation-duration: 6s; width: 7px; height: 7px; }
+
+/* Glitch Effect for "Try Our Classes" */
+.glitch {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  animation: glitch-animation 1.5s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  color: #ff0000;
+  transform: translate(-2px, -2px);
+  animation: glitch-animation 1.5s infinite alternate-reverse;
+}
+
+.glitch::after {
+  color: #00ff00;
+  transform: translate(2px, 2px);
+  animation: glitch-animation 1.5s infinite alternate;
+}
+
+@keyframes glitch-animation {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Typing Effect for Paragraph */
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #FFD700;
+  width: 0;
+  animation: typing 3s steps(50, end) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}

@@ -10,7 +10,7 @@ const ubuntu = Ubuntu({
 })
 
 export const metadata = {
-	title: "Power 力 | Gym",
+	title: "Power  | Gym",
 	description:
 		"Power Gym: Your professional fitness facility with diverse equipment, classes, and perks. Achieve your fitness goals at our commercial gym. Join us now!"
 }
